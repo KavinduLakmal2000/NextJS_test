@@ -40,7 +40,6 @@ body {
 }
 
 
-/* Ticker Card Styles */
 .ticker-card {
     position: relative;
     border-radius: 1rem;
@@ -73,7 +72,6 @@ body {
     background-color: rgba(34, 197, 94, 0.1);
 }
 
-/* Header Styles */
 .ticker-card-header {
     position: absolute;
     top: 0;
@@ -126,7 +124,6 @@ body {
     background-color: #dc2626;
 }
 
-/* Main Content Styles */
 .ticker-card-main {
     display: flex;
     align-items: center;
@@ -162,7 +159,6 @@ body {
     color: #9ca3af;
 }
 
-/* Right Side Styles */
 .ticker-card-right {
     text-align: right;
 }

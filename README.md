@@ -26,5 +26,10 @@ A beautiful, interactive financial ticker card built with Next.js, React, and Ta
 
 1. **Clone the repository**
    ```bash
+<<<<<<< Updated upstream
    git clone https://github.com/kavindulakmal2000/NextJS_test.git
    cd NextJS_test
+=======
+   git clone https://github.com//NextJS_test.git
+   cd NextJS_test
+>>>>>>> Stashed changes

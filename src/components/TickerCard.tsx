@@ -13,7 +13,6 @@ export default function TickerCard() {
             className={`ticker-card ${hoveringCard ? "ticker-card--hover" : ""}`}
         >
             <div className={`ticker-card-overlay ${hoveringCard ? "ticker-card-overlay--hover" : ""}`}></div>
-
             <div className="ticker-card-header">
                 <div className="ticker-card-header-content">
                     <div className="ticker-card-header-text">
