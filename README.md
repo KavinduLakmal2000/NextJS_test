@@ -2,7 +2,7 @@
 
 A beautiful, interactive financial ticker card built with Next.js, React, and Tailwind CSS. Features a modern design with hover effects and smooth animations.
 
-![Ticker Card Preview](https://via.placeholder.com/500x300/0b0b0b/ffffff?text=Ticker+Card+Preview)
+<img width="484" height="186" alt="image" src="https://github.com/user-attachments/assets/3e638e4c-a8fd-42dd-8b2d-81befe0576e8" />
 
 ## 🚀 Features
 
@@ -11,7 +11,7 @@ A beautiful, interactive financial ticker card built with Next.js, React, and Ta
 - **Percentage Change Button**: Glowing hover effect with border animation
 - **Header Controls**: Settings and close buttons with hover states
 - **Responsive Design**: Built with Tailwind CSS for consistency
-- **TypeScript Support**: Fully typed for better development experience
+- **TypeScript Support**: Fully typed for a better development experience
 - **Clean Architecture**: Separated styles and components for maintainability
 
 ## 🛠 Tech Stack
@@ -26,5 +26,5 @@ A beautiful, interactive financial ticker card built with Next.js, React, and Ta
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/NextJS_test.git
+   git clone https://github.com/kavindulakmal2000/NextJS_test.git
    cd NextJS_test
