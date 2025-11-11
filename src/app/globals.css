@@ -216,7 +216,6 @@ body {
 }
 
 
-/* Settings Modal Styles */
 .settings-modal-overlay {
     position: fixed;
     top: 0;
@@ -295,7 +294,7 @@ body {
     padding: 1.5rem;
 }
 
-/* Dropdown Styles */
+
 .settings-dropdown-group {
     margin-bottom: 1.5rem;
 }
@@ -340,7 +339,6 @@ body {
     padding: 0.5rem;
 }
 
-/* Alternative slide-in animation */
 @keyframes modalSlideIn {
     from {
         opacity: 0;
@@ -361,7 +359,7 @@ body {
     }
 }
 
-/* If you prefer slide-in instead of zoom */
+
 .settings-modal.slide-in {
     animation: modalSlideIn 0.3s ease-out;
 }
@@ -370,7 +368,6 @@ body {
     animation: overlayFadeIn 0.3s ease-out;
 }
 
-/* Modern Dropdown Styles */
 .settings-dropdown-group {
     margin-bottom: 1.5rem;
     position: relative;
@@ -413,7 +410,6 @@ body {
     z-index: 2;
 }
 
-/* Modern focus and hover states */
 .settings-dropdown:focus {
     outline: none;
     border-color: #10b981;
@@ -428,7 +424,6 @@ body {
     background-color: #1a1a1a;
 }
 
-/* Dropdown arrow */
 .dropdown-arrow {
     position: absolute;
     right: 0.75rem;
@@ -450,7 +445,7 @@ body {
     transform: translateY(-50%) rotate(180deg);
 }
 
-/* Custom dropdown options styling */
+
 .settings-dropdown option {
     background-color: #000;
     color: white;
@@ -468,7 +463,6 @@ body {
     color: white;
 }
 
-/* Dropdown focus glow effect */
 .dropdown-container::before {
     content: '';
     position: absolute;
@@ -488,30 +482,27 @@ body {
     opacity: 1;
 }
 
-/* Modern select dropdown styling for different browsers */
+
 .settings-dropdown::-ms-expand {
     display: none;
 }
 
-/* Hover lift effect */
 .dropdown-container:hover .settings-dropdown {
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Active state */
 .settings-dropdown:active {
     transform: translateY(0);
 }
 
-/* Gradient border effect on focus */
 .settings-dropdown:focus {
     background: linear-gradient(#111, #111) padding-box,
                 linear-gradient(135deg, #10b981, #059669) border-box;
     border: 1px solid transparent;
 }
 
-/* Responsive design */
+
 @media (max-width: 480px) {
     .settings-dropdown {
         padding: 1rem 1.25rem;
@@ -524,7 +515,7 @@ body {
     }
 }
 
-/* Animation for dropdown opening */
+
 @keyframes dropdownOpen {
     from {
         opacity: 0;

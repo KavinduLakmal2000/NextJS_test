@@ -15,21 +15,16 @@ export default function TickerCard() {
             onMouseLeave={() => setHoveringCard(false)}
             className={`ticker-card ${hoveringCard ? "ticker-card--hover" : ""}`}
         >
-            {/* Green tint overlay on card */}
             <div className={`ticker-card-overlay ${hoveringCard ? "ticker-card-overlay--hover" : ""}`}></div>
 
-            {/* Header positioned at top with no margin */}
             <div className="ticker-card-header">
                 <div className="ticker-card-header-content">
-                    {/* Left side - Text */}
                     <div className="ticker-card-header-text">
                         <span className="text-white-500">Single Ticker</span> |{" "}
                         <span className="text-red-500">EURUSD</span>
                     </div>
 
-                    {/* Right side - Buttons */}
                     <div className="ticker-card-header-buttons">
-                        {/* Settings button */}
                         <button
                             className="ticker-card-header-button ticker-card-header-button--settings"
                             onClick={() => setShowSettings(true)}
@@ -37,17 +32,13 @@ export default function TickerCard() {
                             ⚙️
                         </button>
 
-                        {/* Close button */}
                         <button className="ticker-card-header-button ticker-card-header-button--close">
                             ✕
                         </button>
                     </div>
                 </div>
             </div>
-
-            {/* Main Section */}
             <div className="ticker-card-main">
-                {/* Left side */}
                 <div className="ticker-card-left">
                     <div className="ticker-card-icon">
                         🇪🇺
@@ -57,8 +48,6 @@ export default function TickerCard() {
                         <div className="ticker-card-description">EURO / U.S. DOLLAR</div>
                     </div>
                 </div>
-
-                {/* Right side */}
                 <div className="ticker-card-right">
                     <div className="ticker-card-price-container">
                         <div className="ticker-card-price">1.07400</div>
@@ -76,8 +65,6 @@ export default function TickerCard() {
                     </div>
                 </div>
             </div>
-
-            {/* Settings Modal */}
             {showSettings && (
                 <div
                     className={`settings-modal-overlay ${showSettings ? 'settings-modal-overlay--active' : ''}`}
@@ -97,8 +84,6 @@ export default function TickerCard() {
                             </button>
                         </div>
                         <div className="settings-modal-content">
-                            {/* Timeframe Dropdown */}
-                            {/* Timeframe Dropdown */}
                             <div className="settings-dropdown-group">
                                 <label className="settings-dropdown-label">
                                     Currency
@@ -120,8 +105,6 @@ export default function TickerCard() {
                                     </div>
                                 </div>
                             </div>
-                            {/* Theme Dropdown */}
-                            {/* Theme Dropdown */}
                             <div className="settings-dropdown-group">
                                 <label className="settings-dropdown-label">
                                     Price Layout
