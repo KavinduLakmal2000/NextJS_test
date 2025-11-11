@@ -5,6 +5,9 @@ import { useState } from "react";
 export default function TickerCard() {
     const [hoveringCard, setHoveringCard] = useState(false);
     const [hoveringButton, setHoveringButton] = useState(false);
+    const [showSettings, setShowSettings] = useState(false);
+    const [timeframe, setTimeframe] = useState("1h");
+    const [theme, setTheme] = useState("dark");
 
     return (
         <div
@@ -12,19 +15,29 @@ export default function TickerCard() {
             onMouseLeave={() => setHoveringCard(false)}
             className={`ticker-card ${hoveringCard ? "ticker-card--hover" : ""}`}
         >
+            {/* Green tint overlay on card */}
             <div className={`ticker-card-overlay ${hoveringCard ? "ticker-card-overlay--hover" : ""}`}></div>
+
+            {/* Header positioned at top with no margin */}
             <div className="ticker-card-header">
                 <div className="ticker-card-header-content">
+                    {/* Left side - Text */}
                     <div className="ticker-card-header-text">
                         <span className="text-white-500">Single Ticker</span> |{" "}
                         <span className="text-red-500">EURUSD</span>
                     </div>
 
+                    {/* Right side - Buttons */}
                     <div className="ticker-card-header-buttons">
-                        <button className="ticker-card-header-button ticker-card-header-button--settings">
+                        {/* Settings button */}
+                        <button
+                            className="ticker-card-header-button ticker-card-header-button--settings"
+                            onClick={() => setShowSettings(true)}
+                        >
                             ⚙️
                         </button>
 
+                        {/* Close button */}
                         <button className="ticker-card-header-button ticker-card-header-button--close">
                             ✕
                         </button>
@@ -32,7 +45,9 @@ export default function TickerCard() {
                 </div>
             </div>
 
+            {/* Main Section */}
             <div className="ticker-card-main">
+                {/* Left side */}
                 <div className="ticker-card-left">
                     <div className="ticker-card-icon">
                         🇪🇺
@@ -43,6 +58,7 @@ export default function TickerCard() {
                     </div>
                 </div>
 
+                {/* Right side */}
                 <div className="ticker-card-right">
                     <div className="ticker-card-price-container">
                         <div className="ticker-card-price">1.07400</div>
@@ -60,6 +76,76 @@ export default function TickerCard() {
                     </div>
                 </div>
             </div>
+
+            {/* Settings Modal */}
+            {showSettings && (
+                <div
+                    className={`settings-modal-overlay ${showSettings ? 'settings-modal-overlay--active' : ''}`}
+                    onClick={() => setShowSettings(false)}
+                >
+                    <div
+                        className={`settings-modal ${showSettings ? 'settings-modal--active' : ''}`}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <div className="settings-modal-header">
+                            <h3 className="settings-modal-title">Settings</h3>
+                            <button
+                                className="settings-modal-close"
+                                onClick={() => setShowSettings(false)}
+                            >
+                                ✕
+                            </button>
+                        </div>
+                        <div className="settings-modal-content">
+                            {/* Timeframe Dropdown */}
+                            {/* Timeframe Dropdown */}
+                            <div className="settings-dropdown-group">
+                                <label className="settings-dropdown-label">
+                                    Currency
+                                </label>
+                                <div className="dropdown-container">
+                                    <select
+                                        value={timeframe}
+                                        onChange={(e) => setTimeframe(e.target.value)}
+                                        className="settings-dropdown"
+                                    >
+                                        <option value="eurusd">EURUSD</option>
+                                        <option value="gbpusd">GBPUSD</option>
+                                        <option value="usdjpy">USDJPY</option>
+                                    </select>
+                                    <div className="dropdown-arrow">
+                                        <svg className="dropdown-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* Theme Dropdown */}
+                            {/* Theme Dropdown */}
+                            <div className="settings-dropdown-group">
+                                <label className="settings-dropdown-label">
+                                    Price Layout
+                                </label>
+                                <div className="dropdown-container">
+                                    <select
+                                        value={theme}
+                                        onChange={(e) => setTheme(e.target.value)}
+                                        className="settings-dropdown"
+                                    >
+                                        <option value="BelowSymbol">Below Symbol</option>
+                                        <option value="RightSide">Right Side</option>
+                                    </select>
+                                    <div className="dropdown-arrow">
+                                        <svg className="dropdown-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
